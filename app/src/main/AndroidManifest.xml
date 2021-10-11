@@ -11,7 +11,13 @@
         android:theme="@style/Theme.Przepisy">
         <activity
             android:name=".PrzepisActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ListaPrzepisowActivity"
             android:exported="true" />

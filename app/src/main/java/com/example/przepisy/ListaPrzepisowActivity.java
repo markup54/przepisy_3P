@@ -15,6 +15,8 @@ import java.util.ArrayList;
 public class ListaPrzepisowActivity extends AppCompatActivity {
 
     private TextView textView;
+    public static  final String EXTRA_ID="extra_id";
+    public static  final String EXTRA_KAT="extra_kat";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +56,8 @@ public class ListaPrzepisowActivity extends AppCompatActivity {
                         ListaPrzepisowActivity.this,
                         PrzepisActivity.class
                 );
-
+                intent.putExtra(EXTRA_ID,i);
+                intent.putExtra(EXTRA_KAT,id);
                 startActivity(intent);
                 }
 
